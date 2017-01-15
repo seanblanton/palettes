@@ -1,0 +1,19 @@
+{
+  "name": "palettes",
+  "version": "0.0.5",
+  "description": "Color palette generator",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "keywords": [
+    "color",
+    "color swatches"
+  ],
+  "author": "Sean Blanton <seanblanton@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chroma-js": "^1.2.1",
+    "data.task": "^3.1.1"
+  }
+}
