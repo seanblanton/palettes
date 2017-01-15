@@ -11,16 +11,56 @@ const lumSet = {
 
 // base hues to start from
 const hueSet = {
-  red: "FF6F52",          // 10
-  redOrange: "F77A31",    // 20
-  orange: "FF8E24",       // 30
-  yellow: "FFCC00",       // 50
-  green: "41CA86",        // 150
-  mint: "43C4AF",         // 170
-  cyan: "57B0C2",         // 190
-  blue: "54A2F0",         // 210
-  indigo: "BB74E3",       // 270
-  gray: "B2B8BD"          // 205
+  red: {
+    hue: "FF6F52",          // 10
+    sat: "5",
+    shift: "2",
+  },
+  redOrange: {
+    hue: "F77A31",          // 20
+    sat: "5",
+    shift: null,
+  },
+  orange: {
+    hue: "FF8E24",          // 30
+    sat: "3",
+    shift: null,
+  },
+  yellow: {
+    hue: "FFCC00",          // 50
+    sat: "3",
+    shift: "12",
+  },
+  green: {
+    hue: "41CA86",          // 150
+    sat: "3",
+    shift: null,
+  },
+  mint: {
+    hue: "43C4AF",          // 170
+    sat: "3",
+    shift: null,
+  },
+  cyan: {
+    hue: "57B0C2",          // 190
+    sat: "3",
+    shift: null,
+  },
+  blue: {
+    hue: "54A2F0",          // 210
+    sat: "3",
+    shift: null,
+  },
+  indigo: {
+    hue: "BB74E3",          // 270
+    sat: "3",
+    shift: null,
+  },
+  gray: {
+    hue: "B2B8BD",          // 205
+    sat: null,
+    shift: null,
+  },
 };
 
 module.exports = {
