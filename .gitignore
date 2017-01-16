@@ -1,4 +1,6 @@
 config.js
+colorPalette.json
+
 # Logs
 logs
 *.log
