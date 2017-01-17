@@ -49,8 +49,8 @@ const buildColor = (key, sat, shift) => {
 
   const steps = stepsToFloat(lumSet)
   .map(s => chroma(color.hue).luminance(s).hex())
-  .map((s, index) => sat ? shiftSat(color.hue, s, index, sat) : s)
-  .map((s, index) => shift ? shiftColor(color.hue, s, index, shift) : s);
+  .map((s, index) => (sat ? shiftSat(color.hue, s, index, sat) : s))
+  .map((s, index) => (shift ? shiftColor(color.hue, s, index, shift) : s));
 
   // return values as incremented key value pair
   const values = expandColors(key, steps);
@@ -69,14 +69,14 @@ const buildPalette = (set) => {
 
 const writeFile = (filename, contents) =>
   new Task((rej, res) =>
-    fs.writeFile(filename, contents, (err, success) => err ? rej(err) : res(success)));
+    fs.writeFile(filename, contents, (err, success) => (err ? rej(err) : res(success))));
 
 // refactor to be a task. run as app().fork()
-const app = () => {
-  buildPalette(hueSet);
-  writeFile('colorPalette.json', JSON.stringify(colors, null, 4))
+const app = (config, output) => {
+  buildPalette(config);
+  writeFile(output, JSON.stringify(colors, null, 4))
   .fork(e => console.log(e),
         s => console.log('Success'));
 };
 
-app();
+app(hueSet, 'colorPalette.json');
