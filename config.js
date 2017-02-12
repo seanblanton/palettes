@@ -5,8 +5,8 @@
 // steps of luminance with restraints to return
 const lumSet = {
   luminance: 10,
-  start: 0.05,
-  end: 0.95,
+  start: 0.02,
+  end: 0.97,
 };
 
 // base hues to start from
